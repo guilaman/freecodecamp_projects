@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Keyboard usage survey</title>
+  </head>
+  <body>
+    <h1 id="title">Keyboard usage survey</h1>
+    <p id="description">Many people spend hours interacting with a computer every day.<br>But not all pay attention to the main tool they use for this.<br>If your job was digging holes, you would want to know your shovel well.</p>
+    <form id="survey-form">
+      <fieldset>
+        <label for="name" id="name-label">What is your name? <input id="name" name="name" placeholder="What others call you" required>
+        </label>
+        <label for="email" id="email-label">Your e-mail: <input id="email" name="email" type="email" placeholder="name@domain.sth" required>
+        </label>
+        <label for="age" id="number-label">How old are you? <input id="number" name="age" type="number" min=3 max=130 placeholder="33">
+        </label>
+        <label for="typing-style">Do you touch-type with all fingers of both hands? Or do you follow a non-standard method?
+          <select id="typing-style" name="typing-style" required>
+            <option value="look-down">I look down at the keyboard to type, and do not use all fingers in both hands.
+            </option>
+            <option value="touch-type">I touch-type with all fingers, looking just at my screen.
+            </option>
+            <option value="non-standard">I type in a non-standard way, but without having to look at the keyboard.
+            </option>
+          </select>
+        </label>
+        <label for="daily-shortcuts">How many different keyboard shortcuts do you use daily? (examples: Ctrl+V, F5, Alt+Tab, ...) 
+          <select id="dropdown" name="daily-shortcuts" required>
+            <option value=0>None</option>
+            <option value=1>1 to 5</option>
+            <option value=2>around 10</option>
+            <option value=4>more than 15</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset name=survey-form>Do you use the mouse or the keyboard the most for navigation in your daily computer use?
+        <label for="mouse">
+          <input type="radio" name="navigation" value="mouse"> Mouse
+        </label>
+        <label for="keyboard">
+          <input type="radio" name="navigation" value="keyboard"> Keyboard
+        </label>
+      Which of these types of keyboards have you seen in person?
+        <label for="membrane"><input type="checkbox" name="membrane" id="membrane" value="membrane"> Common keyboards (membrane style)
+        </label>
+        <label for="mechanical"><input type="checkbox" name="mechanical" id="mechanical" value="mechanical"> Mechanical keyboards (with mechanical switches)
+        </label>
+        <label for="custom"><input type="checkbox" name="custom" id="custom" value="custom"> Custom-made mechanical (switches assembled onto the PCB by the buyer)
+        </label>
+        <label for="handwired"><input type="checkbox" name="handwired" id="handwired" value="handwired"> Handwired keyboards (switches connected to the controller using wires instead of a PCB)
+        </label>
+        <label for="comments">What keyboard do you use daily? Do you have more than one keyboard, or do you wish to leave other comments?
+          <textarea name="comments" placeholder="Share your keyboard preferences!" rows=6 cols=36>
+          </textarea>
+        </label>
+      </fieldset>
+      <fieldset>
+        <input type="submit" id="submit" value="Submit">
+      </fieldset>
+    </form>
+  </body>
